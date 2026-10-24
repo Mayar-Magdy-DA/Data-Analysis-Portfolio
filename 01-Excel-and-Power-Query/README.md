@@ -1,6 +1,6 @@
 # Excel and Power Query Projects
 
-Four data-analysis projects built with **Excel, Power Query, the Excel Data Model, and PivotTables/PivotCharts**. Each one starts from raw or messy data, cleans and reshapes it with Power Query, and summarizes it in pivots and charts.
+Five data-analysis projects (four individual, one group) built with **Excel, Power Query, the Excel Data Model, and PivotTables/PivotCharts**. Each one starts from raw or messy data, cleans and reshapes it with Power Query, and summarizes it in pivots and charts.
 
 | # | Project | File | Main skills |
 |---|---|---|---|
@@ -8,7 +8,7 @@ Four data-analysis projects built with **Excel, Power Query, the Excel Data Mode
 | 2 | [Sales Analysis by Country, Product, and Color](#2-sales-analysis-by-country-product-and-color) | `Project1-DA-MayarMagdy.xlsx` | Multi-table Data Model, calculated sales column, pivots |
 | 3 | [Invoice Data Cleaning](#3-invoice-data-cleaning) | `Project2-Invoice-DA-MayarMagdy.xlsx` | Splitting text, append queries, pivots |
 | 4 | [Combining Sales Order Files](#4-combining-sales-order-files) | `Project3-DA-MayarMagdy.xlsx` | Folder query, custom function, unpivot |
-| 5 | Group Project | `GroupProject-DA.xlsx` | *Coming soon* |
+| 5 | [Grocery Delivery Business Analysis (Group Project)](#5-grocery-delivery-business-analysis-group-project) | `GroupProject-DA.xlsx` | Folder of CSVs, merged queries, 6-sheet analysis |
 
 **Tools:** Microsoft Excel, Power Query (M language), Power Pivot / Data Model, PivotTables, PivotCharts
 
@@ -108,8 +108,36 @@ One consolidated table covering **8 sales territories** (Australia, Canada, Cent
 
 ---
 
-## 5. Group Project
-Coming soon.
+## 5. Grocery Delivery Business Analysis (Group Project)
+
+**File:** `GroupProject-DA.xlsx` | **Team project**
+
+**My contribution:**
+- **Understanding the data:** I studied the structure and meaning of each dataset (customers, orders, products, marketing, feedback, delivery, and inventory) to understand how the business works.
+- **Designing the relationships:** I worked out how the tables relate to each other and which relationships should be created in the Data Model so orders can be analyzed by customer, product, and category.
+- **Analyzing results and business impact:** I interpreted the pivot results and explained what they mean for the business, such as sales performance, delivery delays, customer segments, and marketing returns.
+- **Identifying missing information:** I identified which additional data would be needed to get a complete picture of the business.
+
+### Task
+Analyze a grocery delivery business end to end: customers, sales, marketing, inventory, customer feedback, and delivery performance.
+
+### Data
+Several CSV files loaded from one folder: **Customer** (25,000 customers), **Order**, **Product**, **Marketing**, and **Feedback** (50,000 records), covering **2023 to 2025**.
+
+### What we did in Power Query
+- Loaded every file from a folder and set the correct data types, including splitting date-time columns.
+- Built separate queries for Customer, Order, Product, Marketing, Feedback, Category, and Rating.
+- Merged queries (**Order-Customer**, **Order-Product**, **Products details**) so orders can be analyzed by customer segment, category, and brand.
+- Loaded everything into the Data Model and built pivots and charts on **six sheets**: Customer, Sales, Marketing, Inventory, Feedback, and Delivery.
+
+### Key findings
+- **Sales:** Total sales are about 232.3M across 449,854 units, and are flat across years (77.5M in 2023, 77.5M in 2024, 77.2M in 2025).
+- **Categories:** Instant & Frozen Food (31.3M), Baby Care (30.3M), and Cold Drinks & Juices (29.8M) lead. Dairy & Breakfast (13.5M) and Personal Care (14.2M) are the smallest.
+- **Customers:** Customers split almost evenly into four segments (Inactive, New, Premium, Regular), about a quarter each, so roughly 25% of customers are classed as Inactive, which is a retention opportunity.
+- **Marketing:** Spend of about 741K generated about 2.97M in revenue, around 4 times the spend, and App, Email, SMS, and Social Media channels perform very similarly.
+- **Delivery:** 70.2% of orders arrive on time, 19.8% are slightly delayed, and 10.0% are significantly delayed.
+- **Feedback:** The average rating is 4.05 out of 5. 70.2% of feedback is positive and 10.0% is negative, spread evenly across App Experience, Customer Service, Delivery, and Product Quality.
+- **Inventory:** In every category, damaged stock is roughly half of stock received, which is high enough to be worth checking in a real business.
 
 ---
 
@@ -119,6 +147,7 @@ Coming soon.
 - Building a Data Model with relationships between tables
 - PivotTables, PivotCharts, and slicers
 - Turning data into business findings
+- Working in a team on a shared analysis project
 
 ## How to Open
 1. Download any `.xlsx` file from this folder.
